@@ -1,0 +1,46 @@
+<% layout("/layouts/basic.ejs") %>
+<body>
+    <div class="row offset-2">
+        <div class="col-8">
+    <form method="post" action="/Listings/<%=listing._id%>?_method=PUT" enctype="multipart/form-data" >
+        <h3 class="mb-3">Edit content</h3>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="Listing[title]" value="<%=listing.title%>" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <textarea name="Listing[description]" id="" cols="30" rows="2" class="form-control" > <%=listing.description%></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">location</label>
+            <input type="text" name="Listing[location]" value="<%=listing.location%>" class="form-control">
+        </div>
+       <div class="row">
+         <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input value="<%=listing.price%>" name="Listing[price]" class="form-control">
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" name="Listing[country]" value="<%=listing.country%>" class="form-control">
+        </div>
+       </div>
+        <!-- Current image preview -->
+        <% if (listing.image && listing.image.url) { %>
+          <div class="mb-3">
+            <label class="form-label">Current Image</label><br>
+            <img src="<%=listing.image.url%>" alt="Listing image" class="img-fluid mb-2" style="max-height:200px;">
+          </div>
+        <% } %>
+
+        <!-- Upload new image -->
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload New Image</label>
+          <input type="file" name="Listing[image]" class="form-control">
+        </div>
+        <button class="btn btn-dark mb-3">Edit</button>
+    </form>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,15 @@
+<% layout("/layouts/basic.ejs") %>
+<h3 class="col-8 offset-3" >Signup form</h3>
+    <div class="row mt-3">
+        <div class="col-8 offset-3 ">
+            <form action="/signup" method="post" class="needs-validation" novalidate>
+                <label for="username" class="form-label">username</label>
+                <input type="text" name="username" placeholder="username" class="form-control" required>
+                <label for="email" class="form-label">email</label>
+                <input type="email" name="email" placeholder="email" class="form-control" required>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" placeholder="Password" class="form-control" required>
+                <button type="submit" class="btn mt-3 btn-outline-light">SignUp</button>
+            </form>
+        </div>
+    </div>

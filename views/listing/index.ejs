@@ -1,0 +1,84 @@
+<% layout("/layouts/basic.ejs") %>
+<style>
+    #filters{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    .filter{
+        margin-right: 1.5rem;
+        text-align: center;
+        opacity: 0.7;
+    }
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    .filter p{
+        font-size: 0.8rem;
+    }
+</style>
+    <body>
+        <div id="filters">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Tranding</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-duotone fa-solid fa-bed"></i></div>
+                <p>hekki sdjk</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Tranding</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-duotone fa-solid fa-bed"></i></div>
+                <p>hekki sdjk</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Tranding</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-duotone fa-solid fa-bed"></i></div>
+                <p>hekki sdjk</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Tranding</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-duotone fa-solid fa-bed"></i></div>
+                <p>hekki sdjk</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Tranding</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-duotone fa-solid fa-bed"></i></div>
+                <p>hekki sdjk</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mt-2">
+            <%for(listing of allListing){%>
+                <a href="/Listings/<%=listing._id%>" class="listing-link">
+                    <div class="card listing-card">
+                        <img src="<%=listing.image.url%>" class="card-img-top" alt="Listings_image"
+                            style="height: 13rem;">
+                        <div class="card-img-overlay"> </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%=listing.title%>
+                                </b>
+                                <br>
+                                &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> /night
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <%}%>
+        </div>
+    </body>

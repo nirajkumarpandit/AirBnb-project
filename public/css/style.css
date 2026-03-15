@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.navbar-brand i{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    /* !important se style override kar raha hai bootstrap ko */
+    color: black !important; 
+
+}
+.f-info{
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(219, 218, 218);
+}
+.f-info-social, .f-info-links{
+    width: 100%;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: black;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-social i{
+    font-size: 1.2rem;
+   margin-right: 1.2rem;
+}
+
+/* Cards */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+  object-fit: cover !important;
+    
+}
+.card-img-top{
+    border-radius: 1rem !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+
+/* card-effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* show card */
+.show-img img{
+    height: 30vh;
+    object-fit: cover;
+    object-position: center;
+}
+.btns{
+    display: flex;
+    gap: 20px;
+}
+.edit-btn{
+    width: 70px;
+    height: 36px;
+}
+.alert-success, .alert-danger{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
