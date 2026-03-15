@@ -73,9 +73,6 @@ Run the server
 
 node app.js
 
-Open in browser
-
-http://localhost:3000
 
 ## Author
 
